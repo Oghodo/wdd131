@@ -5,8 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 131 – Dynamic Web Fundamentals – Omoregbe Oghodo</title>
-    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals | Omoregbe Oghodo | Personal portfolio, coursework, and project showcase.">
+    <meta name="description" content="Welcome to Omoregbe Oghodo's WDD 131 – Dynamic Web Fundamentals portfolio. Explore my projects, coursework, and personal interests as I learn HTML, CSS, and JavaScript to build modern, dynamic websites.">
     <meta name="author" content="Omoregbe Oghodo">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
     <!-- Link to CSS -->
     <link rel="stylesheet" href="styles/base.css">
@@ -14,51 +19,51 @@
 <body>
     <!-- HEADER SECTION -->
     <header>
-        <h1><span id="course-title">WDD 131 – Dynamic Web Fundamentals</span></h1>
-        <nav>
+        <h1>Omoregbe Oghodo</h1>
+        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+        <nav aria-label="Main Navigation">
             <ul>
-                <li><a href="https://www.linkedin.com/feed/" target="_blank">LinkedIn</a></li>
-                <li><a href="https://byupw.instructure.com/" target="_blank">Canvas</a></li>
-                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/58?lang=eng" target="_blank">Scriptures</a></li>
-                <li><a href="#">Final Project</a></li>
+                <li><a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer" title="Visit my LinkedIn profile">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/" target="_blank" rel="noopener noreferrer" title="Go to Canvas dashboard">Canvas</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/58?lang=eng" target="_blank" rel="noopener noreferrer" title="Read scriptures online">Scriptures</a></li>
+                <li><a href="final-project.html" title="View my final project">Final Project</a></li>
+                <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer" title="My GitHub profile">GitHub</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/" target="_blank" rel="noopener noreferrer" title="MDN Web Docs">MDN Docs</a></li>
+                <li><a href="contact.html" title="Contact me">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- MAIN CONTENT -->
     <main>
-        <h1>Omoregbe Oghodo</h1>
+        <div class="cards-container">
+            <section class="card">
+                <h2>About Me</h2>
+                <img src="images/profile.jpg" alt="Omoregbe Oghodo smiling, wearing a casual shirt" width="300" height="300" loading="lazy">
+                <p>
+                    Hello! My name is Omoregbe Oghodo. I am a footballer and a student passionate about learning web development.
+                    I am currently studying WDD 131 to improve my skills, build dynamic websites, and create a better future for myself, my family, and others.
+                </p>
+            </section>
 
-        <!-- Card 1 -->
-        <section class="card">
-            <h2>About Me</h2>
-            <img src="images/profile.jpg" alt="Photo of Omoregbe Oghodo" width="300">
-            <p>
-                Hello! My name is Omoregbe Oghodo. I am a footballer and a student passionate about learning web development.
-                I am currently studying WDD 131 to improve my skills, build dynamic websites, and create a better future for myself, my family, and others.
-            </p>
-        </section>
-
-        <!-- Card 2 -->
-        <section class="card">
-            <h2>My Interests</h2>
-            <img src="images/interests.jpg" alt="Image showing my interests" width="300">
-            <p>
-                Outside of coding, I enjoy playing football, exploring new technologies, and working on creative web projects.
-                I am excited to learn more about HTML, CSS, and JavaScript to build modern, user-friendly websites.
-            </p>
-        </section>
+            <section class="card">
+                <h2>My Interests</h2>
+                <img src="images/interests.jpg" alt="Football, laptop with code, and creative web development projects" width="300" height="300" loading="lazy">
+                <p>
+                    Outside of coding, I enjoy playing football, exploring new technologies, and working on creative web projects.
+                    I am excited to learn more about HTML, CSS, and JavaScript to build modern, user-friendly websites.
+                </p>
+            </section>
+        </div>
     </main>
 
     <!-- FOOTER SECTION -->
     <footer>
-        <p>
-            ©<span id="currentyear"></span> | Omoregbe Oghodo | Nigeria
-        </p>
+        <p>©<span id="currentyear"></span> Omoregbe Oghodo • Nigeria</p>
         <p id="lastModified"></p>
     </footer>
 
     <!-- Link to JavaScript -->
-    <script src="scripts/getdates.js"></script>
+    <script src="scripts/getdates.js" defer></script>
 </body>
 </html>
