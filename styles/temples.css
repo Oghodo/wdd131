@@ -1,0 +1,138 @@
+/* temples.css | Mobile-First Styles */
+/* Google Font */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fdfdfd;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #004080;
+  color: white;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/* NAVIGATION */
+.main-nav {
+  display: none;
+  flex-direction: column;
+  background-color: #004080;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  width: 200px;
+  padding: 0.5rem;
+  border-radius: 6px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.main-nav.active {
+  display: flex;
+}
+
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav li {
+  margin: 0.5rem 0;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem;
+  display: block;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.main-nav a:hover {
+  background-color: #0066cc;
+}
+
+/* HAMBURGER BUTTON */
+.nav-toggle {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+.hamburger {
+  pointer-events: none;
+}
+
+/* MAIN CONTENT */
+main {
+  padding: 1rem;
+  text-align: center;
+}
+
+main h1 {
+  font-size: 1.8rem;
+  color: #004080;
+  margin-bottom: 1rem;
+}
+
+/* GALLERY SECTION */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+figure {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+figure:hover {
+  transform: scale(1.03);
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+figcaption {
+  padding: 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  background-color: #f0f0f0;
+  color: #222;
+  text-align: center;
+}
+
+/* FOOTER */
+footer {
+  background-color: #004080;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
