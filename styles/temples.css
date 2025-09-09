@@ -1,138 +1,124 @@
-/* temples.css | Mobile-First Styles */
-/* Google Font */
-body {
-  font-family: "Poppins", sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #fdfdfd;
-  color: #222;
-  line-height: 1.6;
+/* ===========================
+   temples.css
+   Base styles for all screens
+   =========================== */
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --light-bg: #f8f9fa;
+    --dark-text: #2d2d2d;
+    --max-width: 1200px;
+    --font-body: 'Poppins', sans-serif;
 }
 
-/* HEADER */
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--dark-text);
+    background-color: var(--light-bg);
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #004080;
-  color: white;
-  padding: 1rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 header h1 {
-  font-size: 1.5rem;
-  margin: 0;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
-/* NAVIGATION */
-.main-nav {
-  display: none;
-  flex-direction: column;
-  background-color: #004080;
-  position: absolute;
-  top: 60px;
-  right: 10px;
-  width: 200px;
-  padding: 0.5rem;
-  border-radius: 6px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+nav {
+    display: flex;
+    gap: 1rem;
 }
 
-.main-nav.active {
-  display: flex;
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 0.75rem;
+    transition: background-color 0.3s ease;
 }
 
-.main-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+nav a:hover,
+nav a.active {
+    background-color: var(--secondary-color);
+    border-radius: 5px;
 }
 
-.main-nav li {
-  margin: 0.5rem 0;
-}
-
-.main-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  padding: 0.5rem;
-  display: block;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.main-nav a:hover {
-  background-color: #0066cc;
-}
-
-/* HAMBURGER BUTTON */
-.nav-toggle {
-  background: none;
-  border: none;
-  font-size: 1.8rem;
-  color: white;
-  cursor: pointer;
-}
-
-.hamburger {
-  pointer-events: none;
-}
-
-/* MAIN CONTENT */
+/* Main Content */
 main {
-  padding: 1rem;
-  text-align: center;
+    max-width: var(--max-width);
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
-main h1 {
-  font-size: 1.8rem;
-  color: #004080;
-  margin-bottom: 1rem;
+main h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: var(--primary-color);
 }
 
-/* GALLERY SECTION */
-.gallery {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  margin-top: 1.5rem;
+/* Temple Gallery */
+.temples-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    justify-items: center;
 }
 
-figure {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
-  overflow: hidden;
-  transition: transform 0.3s ease;
+.temples-gallery figure {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 350px;
+    width: 100%;
+    transition: transform 0.3s ease;
 }
 
-figure:hover {
-  transform: scale(1.03);
+.temples-gallery figure:hover {
+    transform: scale(1.03);
 }
 
-figure img {
-  width: 100%;
-  height: auto;
-  display: block;
+.temples-gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-figcaption {
-  padding: 0.5rem;
-  font-weight: 600;
-  font-size: 0.95rem;
-  background-color: #f0f0f0;
-  color: #222;
-  text-align: center;
+.temples-gallery figcaption {
+    padding: 0.75rem;
+    text-align: center;
+    font-size: 0.95rem;
+    background-color: var(--light-bg);
+    color: var(--dark-text);
 }
 
-/* FOOTER */
+/* Footer */
 footer {
-  background-color: #004080;
-  color: white;
-  padding: 1rem;
-  text-align: center;
-  font-size: 0.9rem;
-  margin-top: 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
 }
