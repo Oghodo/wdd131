@@ -1,25 +1,31 @@
-// Footer dates
+// scripts/place.js
+
+// === CURRENT YEAR ===
 document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+// === LAST MODIFIED DATE ===
 document.getElementById("lastModified").textContent = document.lastModified;
 
-// Weather calculation
+// === WIND CHILL CALCULATION ===
 function calculateWindChill(tempC, speedKmh) {
-  return (
-    13.12 +
-    0.6215 * tempC -
-    11.37 * Math.pow(speedKmh, 0.16) +
-    0.3965 * tempC * Math.pow(speedKmh, 0.16)
-  ).toFixed(1);
+  if (tempC <= 10 && speedKmh > 4.8) {
+    let chill =
+      13.12 +
+      0.6215 * tempC -
+      11.37 * Math.pow(speedKmh, 0.16) +
+      0.3965 * tempC * Math.pow(speedKmh, 0.16);
+    return chill.toFixed(1);
+  } else {
+    return "N/A";
+  }
 }
 
-// Static values
-const temp = 30; // °C
-const wind = 10; // km/h
-const windChillEl = document.getElementById("windchill");
+// Get temperature and windspeed from DOM
+const temp = parseFloat(document.getElementById("temperature").textContent);
+const wind = parseFloat(document.getElementById("windspeed").textContent);
 
-if (temp <= 10 && wind > 4.8) {
-  windChillEl.textContent = calculateWindChill(temp, wind) + " °C";
-} else {
-  windChillEl.textContent = "N/A";
-}
+// Calculate wind chill
+const windChill = calculateWindChill(temp, wind);
 
+// Display result
+document.getElementById("windchill").textContent = windChill;
