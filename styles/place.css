@@ -3,8 +3,10 @@
   --secondary-color: #ffffff; /* White */
   --accent-color: #fcd116;   /* Gold/yellow */
   --text-color: #222;        /* Dark gray for readability */
-  --font-family: 'Roboto', Arial, sans-serif; /* Updated to Google Font */
+  --font-family: 'Roboto', Arial, sans-serif;
   --max-width: 1200px;
+  --light-bg: #f9f9f9;       /* Neutral background */
+  --shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -14,14 +16,13 @@
 }
 
 body {
-  margin: 0;
   font-family: var(--font-family);
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--secondary-color);
 }
 
-/* Apply Google Font to all headings explicitly */
+/* Apply font to headings explicitly */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-family);
 }
@@ -41,8 +42,6 @@ header h1 {
 /* === Navigation === */
 nav ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -96,10 +95,10 @@ h2 {
 #gallery figure {
   margin: 0;
   text-align: center;
-  background: #f9f9f9;
+  background: var(--light-bg);
   border-radius: 0.5rem;
   padding: 0.5rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow);
 }
 
 #gallery img {
@@ -115,17 +114,17 @@ h2 {
 
 /* === Weather === */
 #weather {
-  background: #f9f9f9;
+  background: var(--light-bg);
   padding: 1.5rem;
   border-radius: 0.5rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow);
   max-width: 400px;
   margin: auto;
 }
 
+/* Emoticon only in wide view */
 #weather h2::after {
-  content: " ⛅";
-  color: var(--accent-color);
+  content: "";
 }
 
 .weather-icon {
@@ -148,5 +147,11 @@ footer {
 @media (min-width: 768px) {
   #gallery {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Add emoticon only in wider view */
+  #weather h2::after {
+    content: " 😊";
+    color: var(--accent-color);
   }
 }
