@@ -1,0 +1,78 @@
+:root {
+  --primary-color: #008751; /* Nigerian green */
+  --secondary-color: #ffffff;
+  --accent-color: #fcd116;  /* Nigerian flag yellow */
+  --text-color: #222;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  background: var(--secondary-color);
+  color: var(--text-color);
+}
+
+/* HEADER */
+header {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 1rem;
+}
+
+/* HERO */
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* WEATHER */
+.weather {
+  background: #f0f0f0;
+  padding: 1rem;
+  margin: 1rem auto;
+  max-width: 600px;
+  border-radius: 8px;
+  text-align: center;
+}
+.weather .icon {
+  width: 40px;
+  height: 40px;
+}
+
+/* GALLERY */
+.gallery {
+  padding: 1rem;
+}
+.gallery .grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+.gallery img {
+  width: 100%;
+  border-radius: 8px;
+}
+.gallery figure {
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  .gallery .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .weather .condition::after {
+    content: " ☀️"; /* fallback emoji */
+  }
+}
+
+/* FOOTER */
+footer {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
