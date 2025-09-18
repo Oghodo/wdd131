@@ -3,7 +3,7 @@
   --secondary-color: #ffffff; /* White */
   --accent-color: #fcd116;   /* Gold/yellow */
   --text-color: #222;        /* Dark gray for readability */
-  --font-family: Arial, sans-serif;
+  --font-family: 'Roboto', Arial, sans-serif; /* Updated to Google Font */
   --max-width: 1200px;
 }
 
