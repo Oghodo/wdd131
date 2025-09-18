@@ -1,78 +1,142 @@
 :root {
-  --primary-color: #008751; /* Nigerian green */
-  --secondary-color: #ffffff;
-  --accent-color: #fcd116;  /* Nigerian flag yellow */
-  --text-color: #222;
+  --primary-color: #008751; /* Nigerian flag green */
+  --secondary-color: #ffffff; /* White */
+  --accent-color: #fcd116;   /* Gold/yellow */
+  --text-color: #222;        /* Dark gray for readability */
+  --font-family: Arial, sans-serif;
+  --max-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
   margin: 0;
-  background: var(--secondary-color);
+  font-family: var(--font-family);
+  line-height: 1.6;
   color: var(--text-color);
+  background-color: var(--secondary-color);
 }
 
-/* HEADER */
+/* === Header === */
 header {
   background: var(--primary-color);
   color: var(--secondary-color);
-  text-align: center;
   padding: 1rem;
+  text-align: center;
 }
 
-/* HERO */
+header h1 {
+  margin-bottom: 0.5rem;
+}
+
+/* === Navigation === */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+nav a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--accent-color);
+}
+
+/* === Hero === */
 .hero img {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 0.5rem;
 }
 
-/* WEATHER */
-.weather {
-  background: #f0f0f0;
-  padding: 1rem;
-  margin: 1rem auto;
-  max-width: 600px;
-  border-radius: 8px;
-  text-align: center;
-}
-.weather .icon {
-  width: 40px;
-  height: 40px;
+/* === Sections === */
+main {
+  max-width: var(--max-width);
+  margin: auto;
 }
 
-/* GALLERY */
-.gallery {
-  padding: 1rem;
+section {
+  padding: 2rem 1rem;
 }
-.gallery .grid {
+
+h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--accent-color);
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+
+/* === Gallery === */
+#gallery {
   display: grid;
   gap: 1rem;
-  grid-template-columns: 1fr;
 }
-.gallery img {
-  width: 100%;
-  border-radius: 8px;
-}
-.gallery figure {
+
+#gallery figure {
+  margin: 0;
   text-align: center;
+  background: #f9f9f9;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-@media (min-width: 600px) {
-  .gallery .grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .weather .condition::after {
-    content: " ☀️"; /* fallback emoji */
-  }
+#gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
 }
 
-/* FOOTER */
+/* === Weather === */
+#weather {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: auto;
+}
+
+#weather h2::after {
+  content: " ⛅";
+  color: var(--accent-color);
+}
+
+.weather-icon {
+  width: 40px;
+  display: block;
+  margin: 0.5rem auto;
+}
+
+/* === Footer === */
 footer {
   background: var(--primary-color);
   color: var(--secondary-color);
   text-align: center;
   padding: 1rem;
+  margin-top: 2rem;
   font-size: 0.9rem;
+}
+
+/* === Responsive Layouts === */
+@media (min-width: 768px) {
+  #gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
