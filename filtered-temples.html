@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <!-- Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LDS Temple Album | Filtered Temples</title>
+  <meta name="description" content="Explore and filter LDS temples by age, size, and significance.">
+  <meta name="author" content="Omoregbe Oghodo">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <h1>LDS Temple Album – Filtered Temples</h1>
+    <!-- Hamburger button for mobile -->
+    <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu">
+      <span class="hamburger">☰</span>
+    </button>
+    <nav id="main-nav" class="main-nav">
+      <ul>
+        <li><a href="#" id="home">Home</a></li>
+        <li><a href="#" id="old">Old</a></li>
+        <li><a href="#" id="new">New</a></li>
+        <li><a href="#" id="large">Large</a></li>
+        <li><a href="#" id="small">Small</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <h2>Temple Album</h2>
+    <p>Discover some of the most beautiful, amazing and significant temples around the world.</p>
+
+    <!-- DYNAMIC TEMPLE GALLERY -->
+    <section id="temple-cards" class="gallery">
+      <!-- Cards will be injected here by JS -->
+    </section>
+  </main>
+
+  <!-- FOOTER SECTION -->
+  <footer>
+    <p>©<span id="currentYear"></span> Omoregbe Oghodo • Nigeria</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="scripts/filtered-temples.js" defer></script>
+</body>
+</html>
