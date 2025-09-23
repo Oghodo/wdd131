@@ -1,5 +1,3 @@
-// scripts/place.js
-
 // === CURRENT YEAR ===
 document.getElementById("currentYear").textContent = new Date().getFullYear();
 
