@@ -60,6 +60,11 @@ nav a:focus {
   color: var(--accent-color);
 }
 
+nav a:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
 /* === Hero === */
 .hero img {
   width: 100%;
@@ -72,6 +77,7 @@ nav a:focus {
 main {
   max-width: var(--max-width);
   margin: auto;
+  padding: 0 1rem; /* Added for small screens */
 }
 
 section {
@@ -120,6 +126,7 @@ h2 {
   box-shadow: var(--shadow);
   max-width: 400px;
   margin: auto;
+  text-align: center; /* Centered weather text */
 }
 
 /* Emoticon only in wide view */
