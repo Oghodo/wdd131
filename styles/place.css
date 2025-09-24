@@ -22,7 +22,7 @@ body {
   background-color: var(--secondary-color);
 }
 
-/* Apply font to headings explicitly */
+/* Headings */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-family);
 }
@@ -60,12 +60,17 @@ nav a:focus {
   color: var(--accent-color);
 }
 
+/* FIXED: Improved focus outline for AA accessibility */
 nav a:focus {
-  outline: 2px solid var(--accent-color);
-  outline-offset: 2px;
+  outline: 3px solid var(--accent-color);
+  outline-offset: 3px;
 }
 
 /* === Hero === */
+.hero {
+  margin-top: 1rem;
+}
+
 .hero img {
   width: 100%;
   height: auto;
@@ -73,11 +78,11 @@ nav a:focus {
   border-radius: 0.5rem;
 }
 
-/* === Sections === */
+/* === Main Sections === */
 main {
   max-width: var(--max-width);
   margin: auto;
-  padding: 0 1rem; /* Added for small screens */
+  padding: 0 1rem;
 }
 
 section {
@@ -95,11 +100,12 @@ h2 {
 /* === Gallery === */
 #gallery {
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
+  padding: 1rem 0;
 }
 
 #gallery figure {
-  margin: 0;
+  margin: 0 0 1rem 0;
   text-align: center;
   background: var(--light-bg);
   border-radius: 0.5rem;
@@ -124,20 +130,20 @@ h2 {
   padding: 1.5rem;
   border-radius: 0.5rem;
   box-shadow: var(--shadow);
-  max-width: 400px;
-  margin: auto;
-  text-align: center; /* Centered weather text */
-}
-
-/* Emoticon only in wide view */
-#weather h2::after {
-  content: "";
+  max-width: 90%;
+  margin: 2rem auto;
+  text-align: center;
 }
 
 .weather-icon {
   width: 40px;
   display: block;
   margin: 0.5rem auto;
+}
+
+/* Emoticon only in wide view */
+#weather h2::after {
+  content: "";
 }
 
 /* === Footer === */
@@ -156,9 +162,14 @@ footer {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  /* Add emoticon only in wider view */
   #weather h2::after {
     content: " 😊";
     color: var(--accent-color);
+  }
+}
+
+@media (max-width: 767px) {
+  #gallery {
+    gap: 1.5rem;
   }
 }
