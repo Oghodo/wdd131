@@ -1,0 +1,36 @@
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+  color: #222;
+  background-color: #f9f9f9;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1rem;
+  background: #008751;
+  color: #fff;
+}
+
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+.color-sample {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  border: 1px solid #ccc;
+  vertical-align: middle;
+}
+
+.color-sample.primary { background-color: #008751; }
+.color-sample.accent { background-color: #fcd116; }
+.color-sample.text { background-color: #222; }
