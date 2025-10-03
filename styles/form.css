@@ -87,9 +87,15 @@ textarea {
   resize: vertical;
 }
 
+/* Responsive adjustments */
 @media (max-width: 700px) {
   main {
     margin: 1em;
     padding: 1.5em;
+  }
+
+  fieldset label {
+    display: block;
+    margin-bottom: 0.5em;
   }
 }
