@@ -1,7 +1,3 @@
-// =============================
-// Product Review Form Script
-// =============================
-
 // === Product Array ===
 const products = [
   { id: "fc-1888", name: "flux capacitor", averagerating: 4.5 },
@@ -12,42 +8,35 @@ const products = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
-  // =============================
-  // 1. Populate Product Dropdown
-  // =============================
+  // === Populate Product Dropdown ===
   const productSelect = document.getElementById("productName");
-
   if (productSelect) {
     products.forEach(product => {
       const option = document.createElement("option");
       option.value = product.id;
-
-      // Capitalize words for better UX
       option.textContent = product.name
         .split(" ")
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
         .join(" ");
-
       productSelect.appendChild(option);
     });
   }
 
-  // =============================
-  // 2. Review Counter (on review.html)
-  // =============================
+  // === Review Counter on review.html ===
   const reviewCountElement = document.getElementById("reviewCount");
-
   if (reviewCountElement) {
-    // Retrieve current count or default to 0
     let count = Number(localStorage.getItem("reviewCount")) || 0;
-
-    // Only increment if the user just submitted from form.html
     if (document.referrer.includes("form.html")) {
       count += 1;
       localStorage.setItem("reviewCount", count);
     }
-
-    // Display count
     reviewCountElement.textContent = count;
+  }
+
+  // === Last Modified Date in Footer ===
+  const lastModified = document.getElementById("lastModified");
+  if (lastModified) {
+    const date = new Date(document.lastModified);
+    lastModified.textContent = `Last Modified: ${date.toLocaleString()}`;
   }
 });
