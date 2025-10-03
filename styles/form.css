@@ -1,75 +1,138 @@
+/* ------------------------------
+   Global Styles
+------------------------------ */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f9f9f9;
+  background: #f4f7fb;
   color: #333;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
+/* ------------------------------
+   Header & Footer
+------------------------------ */
 header, footer {
   background: #003366;
-  color: white;
+  color: #fff;
   text-align: center;
-  padding: 1em;
+  padding: 1.2em;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
+header h1, footer p {
+  margin: 0;
+  font-weight: 500;
+}
+
+/* ------------------------------
+   Main Content Area
+------------------------------ */
 main {
-  max-width: 600px;
-  margin: 2em auto;
-  background: white;
+  max-width: 650px;
+  margin: 2.5em auto;
+  background: #fff;
   padding: 2em;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease-in-out;
 }
 
+main:hover {
+  transform: scale(1.01);
+}
+
+/* ------------------------------
+   Form Styling
+------------------------------ */
 form {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 1.5em;
 }
 
 label, legend {
-  font-weight: bold;
-  margin-bottom: 0.2em;
+  font-weight: 600;
+  margin-bottom: 0.4em;
+  display: block;
+  color: #003366;
 }
 
 input, select, textarea {
-  padding: 0.5em;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 100%;
+  padding: 0.8em;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
+input:focus, select:focus, textarea:focus {
+  border-color: #0055aa;
+  box-shadow: 0 0 5px rgba(0,85,170,0.3);
+  outline: none;
+}
+
+/* Fieldset Styling */
 fieldset {
   border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 1em;
+  border-radius: 8px;
+  padding: 1em 1.5em;
+  background: #f9fbfd;
 }
 
-input[type="radio"],
-input[type="checkbox"] {
+/* Radio & Checkbox */
+input[type="radio"], input[type="checkbox"] {
+  margin-right: 0.5em;
   width: auto;
 }
 
+/* Submit Button */
 input[type="submit"], .button-link {
   background: #003366;
-  color: white;
-  font-weight: bold;
-  padding: 0.7em 1.2em;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.8em 1.5em;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
-  transition: background 0.3s;
+  transition: background 0.3s, transform 0.2s;
 }
 
 input[type="submit"]:hover,
 .button-link:hover {
   background: #0055aa;
+  transform: translateY(-2px);
 }
 
+/* Required Field Indicator */
 .required {
-  color: red;
+  color: #e63946;
+  margin-left: 0.3em;
+  font-size: 0.9rem;
+}
+
+/* ------------------------------
+   Responsive Design
+------------------------------ */
+@media (max-width: 600px) {
+  main {
+    margin: 1em;
+    padding: 1.5em;
+  }
+
+  form {
+    gap: 1em;
+  }
+
+  input, select, textarea {
+    font-size: 0.95rem;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+  }
 }
