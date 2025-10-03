@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Product Review | WDD 131</title>
-  <meta name="description" content="Submit your product review with rating, installation date, and feedback.">
+  <meta name="description" content="Product Review Form for WDD 131 Assignment">
   <meta name="author" content="Omoregbe Oghodo">
-  
+
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
@@ -22,7 +22,7 @@
   </header>
 
   <main>
-    <form method="get" action="review.html">
+    <form id="reviewForm" method="get" action="review.html">
       <!-- Product Name -->
       <label for="productName">Product Name <span class="required">*</span></label>
       <select id="productName" name="productName" required aria-required="true">
@@ -60,8 +60,8 @@
       <label for="userName">Your Name</label>
       <input type="text" id="userName" name="userName" placeholder="Optional">
 
-      <!-- Submit -->
-      <input type="submit" value="Submit">
+      <!-- Submit Button -->
+      <input type="submit" value="Submit Review">
     </form>
   </main>
 
