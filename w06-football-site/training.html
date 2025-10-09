@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive football training drills to improve skills and track progress.">
+    <title>Training - Oghodo Youth Football Training</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">⚽ Oghodo Football Hub ⚽</div>
+            <button class="nav-toggle" aria-label="toggle navigation">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="training.html">Training</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="training-section">
+            <h1>Training Drills</h1>
+            <p>Click a drill to mark it as completed or add it to favorites!</p>
+            <div id="drill-cards" class="drill-cards"></div>
+        </section>
+
+        <section class="feedback-form">
+            <h2>Submit Your Feedback</h2>
+            <form id="feedbackForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="4" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+            <p id="formMessage"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Oghodo Youth Football Hub | <a href="references.html">References</a></p>
+        <p id="currentYear"></p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
